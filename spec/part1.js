@@ -28,7 +28,7 @@
         expect(_.identity(1)).to.equal(1);
         expect(_.identity('string')).to.equal('string');
         /* jshint ignore:start */
-        expect(_.identity(false)).to.be.false; 
+        expect(_.identity(false)).to.be.false;
         /* jshint ignore:end */
         expect(_.identity(uniqueObject)).to.equal(uniqueObject);
       });
@@ -171,7 +171,7 @@
 
       it('should only iterate over numeric keys of an array, not all properties', function() {
         /* jshint ignore:start */
-        
+
         var iterations = [];
         var letters = ['a', 'b', 'c'];
         letters.someProperty = 'Do not iterate over me!';
@@ -337,7 +337,7 @@
 
       it('should not mutate the input array', function() {
         /* jshint ignore:start */
-        
+
         var input = [1, 2, 3, 4, 5];
         var result = _.uniq(input);
 
@@ -398,7 +398,7 @@
 
       it('should not mutate the input array', function() {
         /* jshint ignore:start */
-        
+
         var input = [1, 2, 3, 4, 5];
         var result = _.map(input, function(num) { /* noop */ });
 
@@ -478,6 +478,7 @@
       });
     });
 
+
     describe('reduce', function() {
       checkForNativeMethods(function() {
         var add = function(tally, item) { return tally + item; };
@@ -499,7 +500,7 @@
         /* jshint ignore:start */
         var input = [1, 2, 3, 4, 5];
         var result = _.reduce(input, function(memo, item) { return item; });
-        
+
         /*
          * Mutation of inputs should be avoided without good justification otherwise
          * as it can often lead to hard to find bugs and confusing code!
